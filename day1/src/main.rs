@@ -1,8 +1,6 @@
 use std::fs;
 
-fn main() {
-    let contents: String = fs::read_to_string("data.in").expect("cannot read file");
-    
+fn part_one(contents: String) {
     let mut column1: Vec<i32> = Vec::new();
     let mut column2: Vec<i32> = Vec::new();
 
@@ -48,4 +46,10 @@ fn main() {
     }
 
     println!("{distance:#?}");
+} 
+
+fn main() {
+    let contents: String = fs::read_to_string("data.in").expect("cannot read file");
+
+    part_one(contents);
 }
